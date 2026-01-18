@@ -2,6 +2,7 @@ import z from "zod";
 import { STATUS_TASK } from "../../types/task/task.dto";
 
 export const createTaskSchema = z.object({
+    id: z.string().optional(),
     title: z.string().min(1, "Title is required"),
     description: z.string().optional(),
     status: z.nativeEnum(STATUS_TASK).optional()

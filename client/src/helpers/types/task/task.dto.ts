@@ -28,3 +28,9 @@ export interface ResTaskDTO{
     createdAt: string;
     updatedAt: string
 }
+
+export interface ReqUpdateTaskDTO {
+    title: string;
+    description?: string
+    status?: STATUS_TASK
+}
